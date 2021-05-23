@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './MenuItem.module.scss';
 
 function MenuItem({ title, imageUrl, size }) {
-	const linkUrl = `/shop/${title}`;
+	const linkUrl = `/crown/shop/${title}`;
 	return (
 		<div className={`${styles[size]} ${styles.menu_item}`}>
 			<img className={styles.background_image} src={imageUrl} alt={title} />
