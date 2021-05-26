@@ -10,6 +10,7 @@ export default function Nav({ title, imageUrl, cid, size, cat_id, price }) {
 					<div id={cat_id} className={styles.property_image}>
 						<div className={styles.property_image_title}>
 							<img src={imageUrl} />
+							
 						</div>
 					</div>
 				</a>
