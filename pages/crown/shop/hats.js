@@ -1,5 +1,5 @@
 
-import Shop from '../../../components/shop/Hats'
+import Shop from '../../../components/shop/Products'
 import Nav from '../../../components/layout/Nav'
 
 export async function getServerSideProps(){
@@ -17,7 +17,7 @@ export default function Home({categories}) {
 	return (
 		<div >
             <Nav />
-			<Shop key={categories[0].cid} categories={categories}/>
+			<Shop key={categories[0].cid} categories={categories} category='HATS'/>
 		</div>
 	);
 }

@@ -2,10 +2,11 @@ import Link from 'next/link';
 import styles from './shop.module.scss';
 import Item from './ShopItem';
 
-export default function Nav({categories}) {
+export default function Nav({categories,category}) {
+	const title = category.toUpperCase();
 	return (
 		<div>
-			<h1 className={styles.products_header__1iU36}>WOMENS Page</h1>
+			<h1 className={styles.products_header__1iU36}>{title} Page</h1>
 
 			<div className={styles.center}>
 			{categories.map(({name: title, remote_url:  imageUrl, cid, size,cat_id,price})=>(

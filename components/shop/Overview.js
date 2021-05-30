@@ -9,9 +9,19 @@ export default function Nav({categories}) {
 // console.log(categories);
 	return (
 		<div>
-			<h1 className={styles.products_header__1iU36}>SHOP Page</h1>
+			<h1 className={styles.products_header_1iU36}>SHOP Page</h1>
 
-			<div className={styles.center}>
+			<div className={styles.cards_list}>
+  
+<div className={styles.card_1}>
+  <div className={styles.card_image}> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+  <div className={styles.card_title_title_white}>
+    <p>Card Title</p>
+  </div>
+</div>
+
+
+</div>
 
 
 
