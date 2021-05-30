@@ -50,7 +50,6 @@ export default function Nav({categories}) {
                 <Item key={id} name={name} remote_url={remote_url} size={size} cat_id={cat_id} price={price} />
             ))} */}
 				
-			</div>
 		</div>
 	);
 }
