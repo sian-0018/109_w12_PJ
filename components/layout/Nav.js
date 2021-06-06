@@ -61,7 +61,7 @@ export default function Nav() {
 									</ul>
 								</li>
 								<li>
-									<a href="#">API Project</a>
+									<a href="/project">API Project</a>
 								</li>
 								<li className={styles.btn_cta}>
 									<a href="#">
