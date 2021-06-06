@@ -3,7 +3,7 @@ import Shop from '../../../components/shop/Shop'
 import Nav from '../../../components/layout/Nav'
 
 export async function getServerSideProps(){
-  const response = await fetch('https://dry-wave-60207.herokuapp.com/api/shop');
+  const response = await fetch('https://crownstrapi-demo.herokuapp.com/products');
   const products = await response.json();
 
   return{
