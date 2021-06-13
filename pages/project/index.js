@@ -1,5 +1,5 @@
 import Layout from '../../components/layout/Layout';
-import MenuContainer from '../../components/api/Project'
+import Project from '../../components/api/Project'
 
 export async function getServerSideProps(){
   const response = await fetch('https://crownstrapi-demo.herokuapp.com/restaurants');
@@ -16,7 +16,7 @@ export default function Home({categories}) {
 	return (
 		<div >
 			<Layout>
-        <MenuContainer key={categories[0].cid} categories={categories}/>
+        <Project key={categories[0].cid} categories={categories}/>
       </Layout>
 		</div>
 	);
