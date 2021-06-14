@@ -16,7 +16,7 @@ export default function Home({categories}) {
 	return (
 		<div >
 			<Layout>
-        <Project key={categories[0].cid} categories={categories}/>
+        <Project categories={categories}/>
       </Layout>
 		</div>
 	);

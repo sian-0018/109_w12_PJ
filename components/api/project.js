@@ -28,7 +28,8 @@ export default function Nav({categories}) {
 		<div>
 			<h1 className={styles.products_header__1iU36}>Restaurant Page</h1>
 			{displayProducts.map(({cid,title, cover_image:  imageUrl, address, business_hours,fb_url,phone,web_url,traffic_guideline:traffic,parking_information:parking})=>(
-                <Item key={cid} title={title} imageUrl={imageUrl} address={address} business_hours={business_hours} fb_url={fb_url} phone={phone} web_url={web_url} traffic={traffic} parking={parking} />
+                <Item  title={title} imageUrl={imageUrl} address={address} business_hours={business_hours} fb_url={fb_url} phone={phone} web_url={web_url} traffic={traffic} parking={parking} />
+				// key={cid}
             ))}
 			<ReactPaginate
 			previousLabel={'Prev'}
