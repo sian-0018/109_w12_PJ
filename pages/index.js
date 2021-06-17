@@ -18,6 +18,7 @@ export default function Home({categories}) {
 			<Layout>
         {/* <Project categories={categories}/> */}
         <h1>我的作品集</h1>
+        <h2>jivroopei</h2>
       </Layout>
 		</div>
 	);
