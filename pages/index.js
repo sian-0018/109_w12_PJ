@@ -1,37 +1,25 @@
-import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+// import Project from '../components/all-home/Project';
 
-import { getFeaturedEvents } from '../dummy-data';
-import EventList from '../components/events/event-list';
-import NewsletterRegistration from '../components/input/newsletter-registration';
-import Nav from '../components/layout/Nav'
+export async function getServerSideProps(){
+  // const response = await fetch('https://crownstrapi-demo.herokuapp.com/restaurants');
+  // const categories = await response.json();
 
-
-function HomePage(props) {
-  return (
-    <div>
-      <Head>
-        <title>NextJS Events</title>
-        <meta
-          name='description'
-          content='Find a lot of great events that allow you to evolve...'
-        />
-      </Head>
-      <Nav/>
-      <NewsletterRegistration />
-      <EventList items={props.events} />
-    </div>
-  );
+  return{
+    props:{
+      categories
+    }
+  }
 }
 
-export async function getStaticProps() {
-  const featuredEvents = await getFeaturedEvents();
-
-  return {
-    props: {
-      events: featuredEvents,
-    },
-    revalidate: 1800,
-  };
+export default function Home({categories}) {
+	return (
+		<div >
+			<Layout>
+        {/* <Project categories={categories}/> */}
+        <h1>我的作品集</h1>
+      </Layout>
+		</div>
+	);
 }
-
-export default HomePage;
+// key={categories[0].cid}

@@ -25,10 +25,11 @@ export default function Nav() {
 									<a>Events</a>
 									<ul className={styles.dropdown}>
 										<li>
-											<a href="/events">All</a>
+											<a href="/events">Search</a>
 										</li>
-
-										<li />
+										<li>
+											<a href="/events/index1">All</a>
+										</li>
 										<li>
 											<a href="/events/featured">Featured</a>
 										</li>

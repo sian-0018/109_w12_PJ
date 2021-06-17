@@ -1,50 +1,37 @@
-import { Fragment } from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 
-// import { getAllEvents } from '../../helpers/api-util';
-import { getAllEvents } from '../../dummy-data';
-
+import { getFeaturedEvents } from '../../dummy-data';
 import EventList from '../../components/events/event-list';
-import EventsSearch from '../../components/events/events-search';
+import NewsletterRegistration from '../../components/input/newsletter-registration';
+import Nav from '../../components/layout/Nav'
 
-import Nav from '../../components/layout/Nav';
 
-function AllEventsPage(props) {
-	const router = useRouter();
-	const { events } = props;
-
-	function findEventsHandler(year, month) {
-		const fullPath = `/events/${year}/${month}`;
-
-		router.push(fullPath);
-	}
-
-	return (
-		<Fragment>
-			<Nav />
-			<Head>
-				<title>All my events</title>
-			</Head>
-			<Head>
-				<title>All Events</title>
-				<meta name="description" content="Find a lot of great events that allow you to evolve..." />
-			</Head>
-			<EventsSearch onSearch={findEventsHandler} />
-			<EventList items={events} />
-		</Fragment>
-	);
+function HomePage(props) {
+  return (
+    <div>
+      <Head>
+        <title>NextJS Events</title>
+        <meta
+          name='description'
+          content='Find a lot of great events that allow you to evolve...'
+        />
+      </Head>
+      <Nav/>
+      <NewsletterRegistration />
+      <EventList items={props.events} />
+    </div>
+  );
 }
 
 export async function getStaticProps() {
-	const events = await getAllEvents();
+  const featuredEvents = await getFeaturedEvents();
 
-	return {
-		props: {
-			events: events
-		},
-		revalidate: 60
-	};
+  return {
+    props: {
+      events: featuredEvents,
+    },
+    revalidate: 1800,
+  };
 }
 
-export default AllEventsPage;
+export default HomePage;
