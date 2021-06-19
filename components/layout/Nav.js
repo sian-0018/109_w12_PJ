@@ -13,7 +13,7 @@ export default function Nav() {
 								<a href="/">
 									<img src="/favicon.svg" alt="" />
 								</a>
-								<a href="index.html">
+								<a href="/">
 									Law<span>firm.</span>
 								</a>
 							</div>
@@ -62,7 +62,7 @@ export default function Nav() {
 									</ul>
 								</li>
 								<li>
-									<a href="/project">API Project</a>
+									<a href="/project">Keelung Travel Guide</a>
 								</li>
 								<li className={styles.btn_cta}>
 									<a href="#">
