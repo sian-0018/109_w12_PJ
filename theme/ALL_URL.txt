@@ -4,3 +4,5 @@ fb_icon=(https://www.iconfinder.com/search/?q=fb)
 card_url=(https://codepen.io/ChynoDeluxe/pen/bdXeqQ)
 
 restaurants_url=(https://data.gov.tw/dataset/129333)
+
+My Project_card=(https://codepen.io/seyedi/pen/zYoeLEv)
