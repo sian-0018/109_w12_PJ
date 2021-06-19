@@ -1,9 +1,9 @@
 import Layout from '../components/layout/Layout';
-// import Project from '../components/all-home/Project';
+import Project from '../components/all-home/Project';
 
 export async function getServerSideProps(){
-  // const response = await fetch('https://crownstrapi-demo.herokuapp.com/restaurants');
-  // const categories = await response.json();
+  const response = await fetch('https://crownstrapi-demo.herokuapp.com/projects');
+  const categories = await response.json();
 
   return{
     props:{
@@ -13,12 +13,11 @@ export async function getServerSideProps(){
 }
 
 export default function Home({categories}) {
+  // console.log("iwefniewnvioewvne",categories);
 	return (
 		<div >
 			<Layout>
-        {/* <Project categories={categories}/> */}
-        <h1>我的作品集</h1>
-        <h2>jivroopei</h2>
+        <Project key={categories[0].id} categories={categories}/>
       </Layout>
 		</div>
 	);

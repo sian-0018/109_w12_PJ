@@ -26,7 +26,7 @@ export default function Nav({categories}) {
 	// const title = category.toUpperCase();
 	return (
 		<div>
-			<h1 className={styles.products_header__1iU36}>Restaurant Page</h1>
+			<h1 className={styles.products_header__1iU36}>基隆旅遊景點</h1>
 			{displayProducts.map(({cid,title, cover_image:  imageUrl, address, business_hours,fb_url,phone,web_url,traffic_guideline:traffic,parking_information:parking})=>(
                 <Item  title={title} imageUrl={imageUrl} address={address} business_hours={business_hours} fb_url={fb_url} phone={phone} web_url={web_url} traffic={traffic} parking={parking} />
 				// key={cid}
